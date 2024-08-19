@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 
 // Укажите ваш токен
-const bot = new TelegramBot('7430956094:AAH6GeST4sqhsSJ0ev7VoAQF4BUCOwQxGtQ', { polling: true });
+const bot = new TelegramBot('', { polling: true });
 
 console.log('Запущен бот');
 
