@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 
 // Укажите ваш токен
-const bot = new TelegramBot('', { polling: true });
+const bot = new TelegramBot('7430956094:AAH6GeST4sqhsSJ0ev7VoAQF4BUCOwQxGtQ', { polling: true });
 
 console.log('Запущен бот');
 
@@ -17,7 +17,6 @@ bot.on('message', async (msg) => {
         } else if (msg.contact) {
             const phoneNumber = msg.contact.phone_number.replace('+', '');
             const userId = msg.contact.user_id.toString();
-            console.log(`Отправка контакта: ${phoneNumber}; Имя: ${msg.from.first_name}`);
             await savePhoneNumberToDatabase(phoneNumber, userId, chatId);
         }
     } catch (error) {
